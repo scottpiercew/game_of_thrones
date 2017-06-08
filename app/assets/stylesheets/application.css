@@ -14,13 +14,13 @@
  *= require_self
  */
  /* assets/stylesheets */
-@font-face {
-  font-family: "thrones";
-  src: url('game_of_thrones.ttf') format("truetype");
-}
+ @font-face {
+   font-family: "thrones";
+   src: url('game_of_thrones.ttf') format("truetype");
+ }
 
 body {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'thrones';
   background: #f4eb4b;
   background: -webkit-linear-gradient(top left, #f4eb4b, #7c7a56);
   background: -o-linear-gradient(top left, #f4eb4b, #7c7a56);
