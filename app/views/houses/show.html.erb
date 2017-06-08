@@ -1,8 +1,13 @@
 <h1><%= @house.name %></h1>
+<p> "<%= @house.words %>"</p>
 <img src="<%= @house.img_url %>"/>
-<h1>With:</h1>
+<p> Region: <%= @house.region %></p>
+<h3>Characters:</h3>
 
   <% @house.characters.each do |character| %>
     <h2> <%= link_to character.name, house_character_path(character.house) %> </h2>
   <% end %>
-</div>
+
+<p><%= link_to "Change House Info", edit_house_path %><p>
+
+  <h3><%= link_to "Add Character To House", new_house_character_path(@house) %></h3>

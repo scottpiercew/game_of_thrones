@@ -1,0 +1,5 @@
+<h2>Change <%= @house.name %></h2>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete!', house_path(@house), method: :delete, class: 'delete' %>
