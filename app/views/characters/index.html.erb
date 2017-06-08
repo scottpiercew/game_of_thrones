@@ -3,3 +3,5 @@
 <% @characters.each do |character| %>
   <h1><%= link_to character.name, house_character_path(character.house, character) %></h1>
 <% end %>
+
+<h3><%= link_to "Add Character", new_character_path %></h3>

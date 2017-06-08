@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   root to: "houses#index"
 
   resources :houses do
-    resources :characters
+    resources :characters, except: [:new]
   end
 
-  resources :characters, only: [:index]
-
+  resources :characters
 end
