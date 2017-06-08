@@ -1,0 +1,8 @@
+<h1><%= @house.name %></h1>
+<img src="<%= @house.img_url %>"/>
+<h1>With:</h1>
+
+  <% @house.characters.each do |character| %>
+    <h2> <%= link_to character.name, house_character_path(character.house) %> </h2>
+  <% end %>
+</div>

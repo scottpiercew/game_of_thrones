@@ -1,0 +1,5 @@
+<h1>Hate them or love them?</h1>
+
+<% @characters.each do |character| %>
+  <h1><%= link_to character.name, house_character_path(character.house, character) %></h1>
+<% end %>
