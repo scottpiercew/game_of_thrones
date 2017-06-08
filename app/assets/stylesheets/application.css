@@ -25,5 +25,17 @@ body {
   background: -webkit-linear-gradient(top left, #f4eb4b, #7c7a56);
   background: -o-linear-gradient(top left, #f4eb4b, #7c7a56);
   background: linear-gradient(to bottom right, #f4eb4b, #7c7a56);
+  background-size: auto;
   text-align: center;
+}
+
+.alert {
+  margin: 5px;
+  padding: 5px;
+  background: brown;
+  color: white;
+}
+
+.got {
+  font-size: 60px;
 }

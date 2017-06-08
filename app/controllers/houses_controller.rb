@@ -14,7 +14,7 @@ class HousesController < ApplicationController
   end
 
   def create
-    @house = House.create!(house_params)
+    @house = House.create!(house_params.merge(user: current_user))
     redirect_to house_path(@house)
   end
 
@@ -30,7 +30,11 @@ class HousesController < ApplicationController
 
   def destroy
     @house = House.find(params[:id])
-    @house.destroy
+    if @house.user == current_user
+      @house.destroy
+    else
+      flash[:alert] = "You do not have permissions to destroy them"
+    end
     redirect_to houses_path
   end
 
